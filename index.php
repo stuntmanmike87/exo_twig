@@ -24,9 +24,15 @@
     $utilisateurs = $data_array['results'];
 
 
-    $template_users = $twig->load('utilisateurs.tpl');
+    $utilisateurs = $twig->load('utilisateurs.tpl');
 
-    echo $template_users->render(
+    echo $template->render(
+        [
+            'utilisateurs' => $utilisateurs
+        ]
+    );
+    
+    /* echo $template_users->render(
         [
             'picture' => 'medium',
             'name' => 'first',
@@ -34,6 +40,6 @@
             'location' => 'city',
             'login' => 'password',
         ]
-    );
+    ); */
 ?>
 
